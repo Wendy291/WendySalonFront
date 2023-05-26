@@ -34,7 +34,7 @@ export class ReservationComponent {
       }
     )
   }
-  deleteUtilisateur(id:number){
+  deleteReservation(id:number){
     this.reservationService.delete(id).subscribe(
       () => {
         this.findAllReservations();

@@ -27,7 +27,7 @@ export class AvisComponent implements OnInit{
     this.avisService.findAll().subscribe(data => {this.user = data});
 
   }
-  saveUtilisateur(){
+  saveAvis(){
     this.avisService.save(this.user).subscribe(
       () => {
         // MAJ la liste des utilisateurs
@@ -38,7 +38,7 @@ export class AvisComponent implements OnInit{
       }
     )
   }
-  deleteUtilisateur(id:number){
+  deleteAvis(id:number){
     this.avisService.delete(id).subscribe(
       () => {
         this.findAllAvis();

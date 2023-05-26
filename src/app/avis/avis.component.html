@@ -2,17 +2,14 @@
     <h1>Ajouter un Avis</h1>
     <form (ngSubmit)="saveAvis()">
         <table>
-            <tr>
-                <td>Utilisateur</td>
-                <td><input type="text" [(ngModel)]="user.nom" name="nom"/></td>
-            </tr>
+            
             <tr>
                 <td>Titre</td>
                 <td><input type="text" [(ngModel)]="user.titre" name="titre"/></td>
             </tr>
             <tr>
-                <td>Commentaire</td>
-                <td><input type="text" [(ngModel)]="user.commentaire" name="commentaire"/></td>
+                <td>Descprition</td>
+                <td><input type="text" [(ngModel)]="user.description" name="description"/></td>
             </tr>
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
@@ -25,16 +22,17 @@
         <tr>
             <td>Utilisateur</td>
             <td>Titre</td>
-            <td>Commentaire</td>
+            <td>description</td>
 
         </tr>
         <tr *ngFor="let u of users">
             <td>{{u.nom}}</td>
             <td>{{u.titre}}</td>
-            <td>{{u.commentaire}}</td>
+            <td>{{u.description}}</td>
 
-            <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
+            <td><button (click)="deleteAvis(u.idAvis)">Delete</button></td>
              
         </tr>
     </table>
 </div>
+<router-outlet></router-outlet>
