@@ -1,3 +1,4 @@
+import { Avis } from "./avis";
 import { Role } from "./role";
 
 export class Utilisateur {
@@ -7,4 +8,6 @@ export class Utilisateur {
     username!:string;
     password!:string;
     roles!:Role[];
+    avis!:Avis[];
+    reservation:Reservation[];
 }

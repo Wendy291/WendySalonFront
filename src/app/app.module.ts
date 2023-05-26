@@ -10,13 +10,20 @@ import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { UtilisateurService } from './services/utilisateur.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AvisComponent } from './avis/avis.component';
+import { PrestationComponent } from './prestation/prestation.component';
+import { PrestationService } from './services/prestation.service';
+import { AvisService } from './services/avis.service';
 @NgModule({
   declarations: [
     AppComponent,
     UtilisateurComponent,
     RoleComponent,
     MyDirectiveDirective,
-    SqrtPipe
+    SqrtPipe,
+    AvisComponent,
+    PrestationComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule, // [(ngModel)] : Two-way DataBinding
     HttpClientModule // Pour utiliser les verbes http : GET,POST, PUT,DELETE
   ],
-  providers: [UtilisateurService], // Les services
+  providers: [UtilisateurService, PrestationService, AvisService], // Les services
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
