@@ -1,4 +1,5 @@
 import { Avis } from "./avis";
+import { Reservation } from "./reservation";
 import { Role } from "./role";
 
 export class Utilisateur {
@@ -9,5 +10,5 @@ export class Utilisateur {
     password!:string;
     roles!:Role[];
     avis!:Avis[];
-    reservation:Reservation[];
+    reservation!:Reservation[];
 }
