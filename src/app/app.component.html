@@ -341,7 +341,7 @@
       </g>
     </svg>
 
-    <span oussamaDirective>{{personne}}</span>
+    <span oussamaDirective>Gestion Salon Coiffure</span>
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -351,46 +351,3 @@
   </div>
 
 
-
-
-
-</div>
-<!--Property Binding-->
-<div [align]="alignement">
-   <p>{{msg}}</p>
-</div>
-<!--Event Binding-->
-<div>
-  <button (click)="modifierPersonne()">Modifier</button>
-  <button (click)="resetPersonne()">Reset</button>
-</div>
-<!--Two-way DataBinding-->
-<div>
-  <p>Tel : {{tel}}</p>
-  <input type="number" [(ngModel)]="tel"/>
-</div>
-<!--Les pipes-->
-<div>
-  <span>{{personne | uppercase}}</span>
-  <br>
-  <span>{{personne | lowercase}}</span>
-  <br>
-  <span>Nous sommes le {{lastDate | date:'d-MMMM-YYYY'}}</span>
-  <br>
-  <span>Nous sommes le {{lastDate | date:'dd-MM-YY'}}</span>
-  <br>
-  <span>Nous sommes le {{lastDate | date:'short'}}</span>
-  <br>
-  <span>Currency : {{curr | currency:'GBP'}}</span>
-</div>
-<!--Pipe personnalisé-->
-<div>
-  <h1>Pipe personnalisé</h1>
-  <br>
-  <h3>La racine carrée de 16 est : {{16|sqrtOussama}}</h3>
-  <br>
-  <h3>La racine carrée de 25 est : {{25|sqrtOussama}}</h3>
-</div>
-<!--Le routing-->
-<a routerLink="/utilisateur">User</a>
-<router-outlet></router-outlet>
