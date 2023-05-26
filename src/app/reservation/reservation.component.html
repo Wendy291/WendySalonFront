@@ -6,14 +6,7 @@
                 <td>Date</td>
                 <td><input type="date" [(ngModel)]="user.date" name="date"/></td>
             </tr>
-            <tr>
-                <td>Salon</td>
-                <td><input type="text" [(ngModel)]="user.salon" name="Salon"/></td>
-            </tr>
-            <tr>
-                <td>Prestation</td>
-                <td><input type="text" [(ngModel)]="user.prestation" name="username"/></td>
-            </tr>
+            
     
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
@@ -32,7 +25,7 @@
             <td>{{u.date}}</td>
             <td>{{u.Salon}}</td>
             <td>{{u.Prestation}}</td>
-            <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
+            <td><button (click)="deleteReservation(u.idReservation)">Delete</button></td>
              
         </tr>
     </table>

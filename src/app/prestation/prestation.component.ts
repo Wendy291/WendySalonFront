@@ -27,7 +27,7 @@ export class PrestationComponent {
     this.prestationService.findAll().subscribe(data => {this.user = data});
 
   }
-  saveUtilisateur(){
+  savePrestation(){
     this.prestationService.save(this.user).subscribe(
       () => {
         // MAJ la liste des utilisateurs
@@ -38,7 +38,7 @@ export class PrestationComponent {
       }
     )
   }
-  deleteUtilisateur(id:number){
+  deletePrestation(id:number){
     this.prestationService.delete(id).subscribe(
       () => {
         this.findAllPrestation();

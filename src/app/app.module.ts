@@ -10,12 +10,22 @@ import { MyDirectiveDirective } from './directives/my-directive.directive';
 import { SqrtPipe } from './pipes/sqrt.pipe';
 import { UtilisateurService } from './services/utilisateur.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AvisService } from './services/avis.service';
+import { ReservationService } from './services/reservation.service';
+import { AvisComponent } from './avis/avis.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { SalonComponent } from './salon/salon.component';
+import { PrestationComponent } from './prestation/prestation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UtilisateurComponent,
     RoleComponent,
+    AvisComponent,
+    ReservationComponent,
+    SalonComponent,
+    PrestationComponent,
     MyDirectiveDirective,
     SqrtPipe,
 
@@ -27,6 +37,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule // Pour utiliser les verbes http : GET,POST, PUT,DELETE
   ],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [UtilisateurService, AvisService, ReservationService]
 })
 export class AppModule { }

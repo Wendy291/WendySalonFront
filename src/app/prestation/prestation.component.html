@@ -1,18 +1,10 @@
 <div>
-    <h1>Ajouter un Avis</h1>
-    <form (ngSubmit)="saveAvis()">
+    <h1>Ajouter une Prestation</h1>
+    <form (ngSubmit)="savePrestation()">
         <table>
             <tr>
-                <td>Utilisateur</td>
+                <td>Nom de la prestaiton</td>
                 <td><input type="text" [(ngModel)]="user.nom" name="nom"/></td>
-            </tr>
-            <tr>
-                <td>Titre</td>
-                <td><input type="text" [(ngModel)]="user.titre" name="titre"/></td>
-            </tr>
-            <tr>
-                <td>Commentaire</td>
-                <td><input type="text" [(ngModel)]="user.commentaire" name="commentaire"/></td>
             </tr>
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
@@ -23,17 +15,12 @@
 <div>
     <table>
         <tr>
-            <td>Utilisateur</td>
-            <td>Titre</td>
-            <td>Commentaire</td>
-
+            <td>Nom de la prestation</td>
+           
         </tr>
         <tr *ngFor="let u of users">
             <td>{{u.nom}}</td>
-            <td>{{u.titre}}</td>
-            <td>{{u.commentaire}}</td>
-
-            <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>
+            <td><button (click)="deletePrestation(u.idPrestation)">Delete</button></td>
              
         </tr>
     </table>
