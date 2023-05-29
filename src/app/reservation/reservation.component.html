@@ -19,12 +19,13 @@
         <tr>
             <td>Date</td>
             <td>Salon</td>
-            <td>Prestation</td>       
+            <td>Prestation</td>
+                  
         </tr>
         <tr *ngFor="let u of users">
             <td>{{u.date}}</td>
-            <td>{{u.Salon}}</td>
-            <td>{{u.Prestation}}</td>
+            <td>{{u.salon}}</td>
+            <td>{{u.prestation}}</td>
             <td><button (click)="deleteReservation(u.idReservation)">Delete</button></td>
              
         </tr>

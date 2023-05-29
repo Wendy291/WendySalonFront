@@ -17,6 +17,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { SalonComponent } from './salon/salon.component';
 import { PrestationComponent } from './prestation/prestation.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

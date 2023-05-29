@@ -8,7 +8,7 @@
                 <td><input type="text" [(ngModel)]="user.titre" name="titre"/></td>
             </tr>
             <tr>
-                <td>Descprition</td>
+                <td>Description</td>
                 <td><input type="text" [(ngModel)]="user.description" name="description"/></td>
             </tr>
             <tr>
@@ -23,16 +23,15 @@
             <td>Utilisateur</td>
             <td>Titre</td>
             <td>description</td>
+            <td>Action</td>
 
         </tr>
         <tr *ngFor="let u of users">
-            <td>{{u.nom}}</td>
+            <td *ngFor="let us of utilisateurs">{{us.nom}}</td>
             <td>{{u.titre}}</td>
             <td>{{u.description}}</td>
-
             <td><button (click)="deleteAvis(u.idAvis)">Delete</button></td>
              
         </tr>
     </table>
 </div>
-<router-outlet></router-outlet>

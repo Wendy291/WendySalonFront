@@ -24,11 +24,11 @@
         <table>
             <tr>
                 <td>Nom</td>
-                <td><input type="text" [(ngModel)]="user.nomUtilisateur" name="nomUtilisateur"/></td>
+                <td><input type="text" [(ngModel)]="user.nom" name="nom"/></td>
             </tr>
             <tr>
                 <td>Prénom</td>
-                <td><input type="text" [(ngModel)]="user.prenomUtilisateur" name="prenomUtilisateur"/></td>
+                <td><input type="text" [(ngModel)]="user.prenom" name="prenom"/></td>
             </tr>
             <tr>
                 <td>Username</td>
@@ -37,6 +37,26 @@
             <tr>
                 <td>Password</td>
                 <td><input type="text" [(ngModel)]="user.password" name="password"/></td>
+            </tr>
+            <tr>
+                <td>Avis</td>
+                <td>
+                    <select  name="avis" [(ngModel)]="user.avis" multiple>
+                        <option *ngFor="let r of avis" [ngValue]="r">
+                            {{r.titre}}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Réservations</td>
+                <td>
+                    <select  name="reservation" [(ngModel)]="user.reservation" multiple>
+                        <option *ngFor="let r of reservations" [ngValue]="r">
+                            {{r.date}}
+                        </option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td colspan="2"><button>Ajouter</button></td>
@@ -54,8 +74,8 @@
             <td>Action</td>
         </tr>
         <tr *ngFor="let u of users">
-            <td>{{u.nomUtilisateur}}</td>
-            <td>{{u.prenomUtilisateur}}</td>
+            <td>{{u.nom}}</td>
+            <td>{{u.prenom}}</td>
             <td>{{u.username}}</td>
             <td>{{u.password}}</td>
             <td><button (click)="deleteUtilisateur(u.idUtilisateur)">Delete</button></td>

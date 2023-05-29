@@ -8,7 +8,7 @@ import { Avis } from '../models/avis';
 })
 export class AvisService {
 
-  private BASE_URL = "http://localhost:8080/utilisateurs";
+  private BASE_URL = "http://localhost:8080/aviss";
   // HttpClient: un module qui nous permet d'utiliser les verbes http : GET.POST,PUT et DELETE
   constructor(private httpClient:HttpClient) { }
   // findAll --> verbe http GET --> url : BASE_URL --> Récupération des données avec la méthode Observable

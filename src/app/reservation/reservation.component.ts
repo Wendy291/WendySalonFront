@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../models/reservation';
 import { ReservationService } from '../services/reservation.service';
 
@@ -8,14 +8,14 @@ import { ReservationService } from '../services/reservation.service';
   styleUrls: ['./reservation.component.css'],
   providers: []
 })
-export class ReservationComponent {
+export class ReservationComponent implements OnInit{
   users!:any[]; // any : n'importe quel type de données
   user:Reservation= new Reservation();
   // DI : par constructeur  
   constructor(private reservationService:ReservationService){
   }
   ngOnInit(): void {
-    this.findAllReservations;
+    this.findAllReservations();
   }
   findAllReservations(){
     // () --> a + b
